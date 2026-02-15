@@ -1,5 +1,4 @@
 import pytest
-from selene.support.conditions.not_ import title
 from selenium import webdriver
 
 @pytest.mark.google
@@ -9,7 +8,7 @@ def test_google():
     driver.get(url)
 
     assert driver.title == "Google"
-    assert driver.current_url == (url)
+    assert driver.current_url == url
 
 
 @pytest.mark.github
@@ -19,4 +18,4 @@ def test_github():
     driver.get(url)
 
     assert "GitHub" in driver.title
-    assert driver.current_url == (url)
+    assert driver.current_url == url
